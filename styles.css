@@ -1008,9 +1008,10 @@ body {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
+    align-items: start;
 }
 
 .footer-brand {
@@ -1142,6 +1143,17 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-brand {
+        grid-column: 1 / 3;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         gap: 1rem;
@@ -1177,6 +1189,10 @@ body {
     .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .footer-brand {
+        grid-column: 1 / 2;
     }
     
     .footer-bottom {
