@@ -13,6 +13,38 @@ body {
     overflow-x: hidden;
 }
 
+/* Blue Gradient Hover Effect for Transparent Elements */
+.red-hover-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.red-hover-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                rgba(99, 102, 241, 0.15) 0%, 
+                rgba(99, 102, 241, 0.08) 30%, 
+                transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.red-hover-effect:hover::before {
+    opacity: 1;
+}
+
+.red-hover-effect > * {
+    position: relative;
+    z-index: 2;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
@@ -146,6 +178,36 @@ body {
     backdrop-filter: blur(10px);
     max-height: calc(100vh - 150px);
     overflow-y: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.hero-demo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                rgba(99, 102, 241, 0.15) 0%, 
+                rgba(99, 102, 241, 0.08) 30%, 
+                transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.hero-demo:hover::before {
+    opacity: 1;
+}
+
+.hero-demo > * {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-demo .demo-header {
@@ -239,6 +301,37 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-demo .demo-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                rgba(99, 102, 241, 0.15) 0%, 
+                rgba(99, 102, 241, 0.08) 30%, 
+                transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 12px;
+}
+
+.hero-demo .demo-panel:hover::before {
+    opacity: 1;
+}
+
+.hero-demo .demo-panel > * {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-demo .demo-panel h4 {
@@ -793,6 +886,37 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-diagram::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                rgba(99, 102, 241, 0.15) 0%, 
+                rgba(99, 102, 241, 0.08) 30%, 
+                transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 16px;
+}
+
+.tech-diagram:hover::before {
+    opacity: 1;
+}
+
+.tech-diagram > * {
+    position: relative;
+    z-index: 2;
 }
 
 .tech-node {
@@ -1166,6 +1290,37 @@ body {
     padding: 2rem;
     margin-bottom: 2rem;
     backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                rgba(99, 102, 241, 0.15) 0%, 
+                rgba(99, 102, 241, 0.08) 30%, 
+                transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 16px;
+}
+
+.feature-highlight:hover::before {
+    opacity: 1;
+}
+
+.feature-highlight > * {
+    position: relative;
+    z-index: 2;
 }
 
 .highlight-icon {
@@ -1223,6 +1378,37 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-comparison::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                rgba(99, 102, 241, 0.15) 0%, 
+                rgba(99, 102, 241, 0.08) 30%, 
+                transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 12px;
+}
+
+.feature-comparison:hover::before {
+    opacity: 1;
+}
+
+.feature-comparison > * {
+    position: relative;
+    z-index: 2;
 }
 
 .feature-comparison h4 {
@@ -1423,6 +1609,36 @@ body {
     border-radius: 16px;
     padding: 2rem;
     backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.research-diagram::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                rgba(99, 102, 241, 0.15) 0%, 
+                rgba(99, 102, 241, 0.08) 30%, 
+                transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.research-diagram:hover::before {
+    opacity: 1;
+}
+
+.research-diagram > * {
+    position: relative;
+    z-index: 2;
 }
 
 .research-layer {
@@ -1453,6 +1669,36 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.technical-details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                rgba(99, 102, 241, 0.15) 0%, 
+                rgba(99, 102, 241, 0.08) 30%, 
+                transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.technical-details:hover::before {
+    opacity: 1;
+}
+
+.technical-details > * {
+    position: relative;
+    z-index: 2;
 }
 
 .technical-details h3 {
@@ -1538,6 +1784,10 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     margin-bottom: 2rem;
+}
+
+.highlight {
+    border-radius: 8px;
 }
 
 .highlight h4 {

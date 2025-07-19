@@ -586,4 +586,26 @@ function setupProgressBars() {
 document.addEventListener('DOMContentLoaded', function() {
     // Existing initialization code...
     setupProgressBars();
+    initializeRedHoverEffect();
 });
+
+// Red hover effect mouse tracking
+function initializeRedHoverEffect() {
+    const hoverElements = document.querySelectorAll('.technical-details, .research-diagram, .hero-demo, .demo-panel, .tech-diagram, .feature-highlight, .feature-comparison');
+    
+    hoverElements.forEach(element => {
+        element.addEventListener('mousemove', function(e) {
+            const rect = element.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            
+            element.style.setProperty('--mouse-x', `${x}%`);
+            element.style.setProperty('--mouse-y', `${y}%`);
+        });
+        
+        element.addEventListener('mouseleave', function() {
+            element.style.setProperty('--mouse-x', '50%');
+            element.style.setProperty('--mouse-y', '50%');
+        });
+    });
+}
