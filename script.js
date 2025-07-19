@@ -476,16 +476,20 @@ function showNotification(message, type = 'info') {
 
 // Animation initialization
 function initializeAnimations() {
-    // Intersection Observer for scroll animations
+    // Intersection Observer for scroll animations with in/out effects
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
     };
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Element is entering viewport
                 entry.target.classList.add('visible');
+            } else {
+                // Element is leaving viewport
+                entry.target.classList.remove('visible');
             }
         });
     }, observerOptions);
@@ -552,15 +556,25 @@ function setupProgressBars() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Element is entering viewport - animate progress bars
                 const fills = entry.target.querySelectorAll('.performance-fill');
                 fills.forEach(fill => {
                     setTimeout(() => {
                         fill.classList.add('animate');
                     }, 500);
                 });
+            } else {
+                // Element is leaving viewport - reset progress bars
+                const fills = entry.target.querySelectorAll('.performance-fill');
+                fills.forEach(fill => {
+                    fill.classList.remove('animate');
+                });
             }
         });
-    }, { threshold: 0.5 });
+    }, { 
+        threshold: 0.5,
+        rootMargin: '0px 0px -50px 0px'
+    });
     
     const performanceGrid = document.querySelector('.performance-grid-horizontal');
     if (performanceGrid) {
