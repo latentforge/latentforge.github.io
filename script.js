@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeEventListeners();
     initializeAnimations();
     updateCharacterCount();
+    updateCopyrightYear();
 });
 
 // Initialize Event Listeners
@@ -81,6 +82,20 @@ function updateCharacterCount() {
             charCount.style.color = '#f59e0b';
         } else {
             charCount.style.color = '#a1a1aa';
+        }
+    }
+}
+
+// Update copyright year
+function updateCopyrightYear() {
+    const currentYear = new Date().getFullYear();
+    const copyrightElement = document.querySelector('.footer-bottom p');
+    
+    if (copyrightElement) {
+        if (currentYear > 2024) {
+            copyrightElement.textContent = `© 2024-${currentYear} LatentForge. All rights reserved.`;
+        } else {
+            copyrightElement.textContent = `© 2024 LatentForge. All rights reserved.`;
         }
     }
 }
