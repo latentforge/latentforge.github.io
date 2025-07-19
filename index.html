@@ -6,7 +6,7 @@
     <title>T2A-LoRA | LatentForge</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -17,7 +17,6 @@
                 <span>LatentForge</span>
             </div>
             <div class="nav-menu">
-                <a href="#demo" class="nav-link">Demo</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#features" class="nav-link">Features</a>
                 <a href="#research" class="nav-link">Research</a>
@@ -34,144 +33,144 @@
             <div class="gradient-orb orb-3"></div>
         </div>
         <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Create the perfect <span class="gradient-text">voice</span> for your content
-                </h1>
-                <p class="hero-subtitle">
-                    T2A-LoRA: Real-time voice adaptation system through natural language descriptions and audio vectors
-                </p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">10x</span>
-                        <span class="stat-label">Faster Adaptation</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">Zero-shot</span>
-                        <span class="stat-label">Generalization</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">Multi-modal</span>
-                        <span class="stat-label">Control</span>
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Create the perfect <span class="gradient-text">voice</span> for your content
+                    </h1>
+                    <p class="hero-subtitle">
+                        T2A-LoRA: Real-time voice adaptation system through natural language descriptions and audio vectors
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">10x</span>
+                            <span class="stat-label">Faster Adaptation</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Zero-shot</span>
+                            <span class="stat-label">Generalization</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Multi-modal</span>
+                            <span class="stat-label">Control</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+                
+                <!-- Full Demo Interface -->
+                <div class="hero-demo">
+                    <div class="demo-header">
+                        <h3>Try T2A-LoRA Now</h3>
+                        <p>Generate custom voice characteristics using natural language or select from presets</p>
+                    </div>
 
-    <!-- Demo Section -->
-    <section class="demo-section" id="demo">
-        <div class="demo-container">
-            <div class="demo-header">
-                <h2>Experience T2A-LoRA</h2>
-                <p>Generate custom voice characteristics using natural language or select from presets</p>
-            </div>
-
-            <!-- Voice Presets -->
-            <div class="voice-presets">
-                <div class="preset-item custom-generator" onclick="openCustomGenerator()">
-                    <div class="preset-icon">
-                        <i class="fas fa-magic"></i>
-                    </div>
-                    <span>Custom Voice Generator</span>
-                </div>
-                <div class="preset-item" onclick="selectPreset('warm-narrator')">
-                    <div class="preset-icon">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <span>Warm Narrator</span>
-                </div>
-                <div class="preset-item" onclick="selectPreset('energetic-young')">
-                    <div class="preset-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <span>Energetic Young</span>
-                </div>
-                <div class="preset-item" onclick="selectPreset('professional-male')">
-                    <div class="preset-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <span>Professional Male</span>
-                </div>
-                <div class="preset-item" onclick="selectPreset('gentle-female')">
-                    <div class="preset-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <span>Gentle Female</span>
-                </div>
-                <div class="preset-item" onclick="selectPreset('documentary')">
-                    <div class="preset-icon">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <span>Documentary</span>
-                </div>
-            </div>
-
-            <!-- Demo Interface -->
-            <div class="demo-interface">
-                <div class="demo-left">
-                    <div class="demo-panel">
-                        <h3>Voice Characteristics</h3>
-                        <div class="voice-display">
-                            <div class="selected-voice" id="selectedVoice">
-                                <div class="voice-preview">
-                                    <i class="fas fa-microphone"></i>
-                                    <span>Select a voice preset or create custom</span>
-                                </div>
+                    <!-- Voice Presets -->
+                    <div class="voice-presets">
+                        <div class="preset-item custom-generator" onclick="openCustomGenerator()">
+                            <div class="preset-icon">
+                                <i class="fas fa-magic"></i>
                             </div>
-                            <div class="voice-controls">
-                                <div class="control-group">
-                                    <label>Emotion</label>
-                                    <div class="slider-container">
-                                        <input type="range" min="0" max="100" value="50" class="slider" id="emotionSlider">
-                                        <span class="slider-value">Neutral</span>
+                            <span>Custom Voice Generator</span>
+                        </div>
+                        <div class="preset-item" onclick="selectPreset('warm-narrator')">
+                            <div class="preset-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span>Warm Narrator</span>
+                        </div>
+                        <div class="preset-item" onclick="selectPreset('energetic-young')">
+                            <div class="preset-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <span>Energetic Young</span>
+                        </div>
+                        <div class="preset-item" onclick="selectPreset('professional-male')">
+                            <div class="preset-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <span>Professional Male</span>
+                        </div>
+                        <div class="preset-item" onclick="selectPreset('gentle-female')">
+                            <div class="preset-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <span>Gentle Female</span>
+                        </div>
+                        <div class="preset-item" onclick="selectPreset('documentary')">
+                            <div class="preset-icon">
+                                <i class="fas fa-film"></i>
+                            </div>
+                            <span>Documentary</span>
+                        </div>
+                    </div>
+
+                    <!-- Demo Interface -->
+                    <div class="demo-interface">
+                        <div class="demo-left">
+                            <div class="demo-panel">
+                                <h4>Voice Characteristics</h4>
+                                <div class="voice-display">
+                                    <div class="selected-voice" id="selectedVoice">
+                                        <div class="voice-preview">
+                                            <i class="fas fa-microphone"></i>
+                                            <span>Select a voice preset or create custom</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="control-group">
-                                    <label>Speed</label>
-                                    <div class="slider-container">
-                                        <input type="range" min="0.5" max="2" value="1" step="0.1" class="slider" id="speedSlider">
-                                        <span class="slider-value">1.0x</span>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label>Pitch</label>
-                                    <div class="slider-container">
-                                        <input type="range" min="-50" max="50" value="0" class="slider" id="pitchSlider">
-                                        <span class="slider-value">Normal</span>
+                                    <div class="voice-controls">
+                                        <div class="control-group">
+                                            <label>Emotion</label>
+                                            <div class="slider-container">
+                                                <input type="range" min="0" max="100" value="50" class="slider" id="emotionSlider">
+                                                <span class="slider-value">Neutral</span>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label>Speed</label>
+                                            <div class="slider-container">
+                                                <input type="range" min="0.5" max="2" value="1" step="0.1" class="slider" id="speedSlider">
+                                                <span class="slider-value">1.0x</span>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label>Pitch</label>
+                                            <div class="slider-container">
+                                                <input type="range" min="-50" max="50" value="0" class="slider" id="pitchSlider">
+                                                <span class="slider-value">Normal</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="demo-right">
-                    <div class="demo-panel">
-                        <h3>Text to Convert</h3>
-                        <div class="text-input-area">
-                            <textarea 
-                                id="textInput" 
-                                placeholder="Enter your text here to convert to speech..."
-                                maxlength="500"
-                            >안녕하세요! T2A-LoRA를 사용하여 자연스러운 음성을 생성해보세요.</textarea>
-                            <div class="text-counter">
-                                <span id="charCount">47</span> / 500
-                            </div>
-                        </div>
-                        <div class="generation-controls">
-                            <button class="generate-btn" id="generateBtn" onclick="generateAudio()">
-                                <i class="fas fa-play"></i>
-                                Generate Audio
-                            </button>
-                            <div class="audio-output" id="audioOutput" style="display: none;">
-                                <audio controls>
-                                    <source src="" type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio>
-                                <button class="download-btn">
-                                    <i class="fas fa-download"></i>
-                                </button>
+                        <div class="demo-right">
+                            <div class="demo-panel">
+                                <h4>Text to Convert</h4>
+                                <div class="text-input-area">
+                                    <textarea 
+                                        id="textInput" 
+                                        placeholder="Enter your text here to convert to speech..."
+                                        maxlength="500"
+                                    >안녕하세요! T2A-LoRA를 사용하여 자연스러운 음성을 생성해보세요.</textarea>
+                                    <div class="text-counter">
+                                        <span id="charCount">47</span> / 500
+                                    </div>
+                                </div>
+                                <div class="generation-controls">
+                                    <button class="generate-btn" id="generateBtn" onclick="generateAudio()">
+                                        <i class="fas fa-play"></i>
+                                        Generate Audio
+                                    </button>
+                                    <div class="audio-output" id="audioOutput" style="display: none;">
+                                        <audio controls>
+                                            <source src="" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                        <button class="download-btn">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -217,40 +216,89 @@
     <!-- About Section -->
     <section class="about-section" id="about">
         <div class="about-container">
-            <div class="about-content animate-left">
-                <h2>Revolutionizing Voice Synthesis</h2>
-                <p>
-                    T2A-LoRA represents a breakthrough in voice adaptation technology. 
-                    Our system enables real-time voice characteristic adaptation through natural language descriptions, 
-                    eliminating the need for time-consuming fine-tuning processes.
-                </p>
-                <div class="about-features">
-                    <div class="feature-point">
-                        <i class="fas fa-lightning-bolt"></i>
-                        <span>Real-time generation</span>
+            <h2 class="about-title">Revolutionizing Voice Synthesis</h2>
+            <div class="about-content-grid">
+                <div class="about-content animate-left">
+                    <p>
+                        T2A-LoRA enables real-time voice adaptation through natural language descriptions, 
+                        eliminating time-consuming fine-tuning processes while maintaining exceptional quality.
+                    </p><br>
+                    <div class="about-features">
+                        <div class="feature-point">
+                            <i class="fas fa-bolt"></i>
+                            <span>Real-time generation in seconds</span>
+                        </div>
+                        <div class="feature-point">
+                            <i class="fas fa-brain"></i>
+                            <span>Natural language control</span>
+                        </div>
+                        <div class="feature-point">
+                            <i class="fas fa-globe"></i>
+                            <span>Multi-language support</span>
+                        </div>
                     </div>
-                    <div class="feature-point">
-                        <i class="fas fa-brain"></i>
-                        <span>Natural language control</span>
-                    </div>
-                    <div class="feature-point">
-                        <i class="fas fa-globe"></i>
-                        <span>Multi-language support</span>
+                    
+                    <!-- Performance Metrics moved to left side -->
+                    <div class="performance-metrics">
+                        <div class="performance-grid-horizontal">
+                            <div class="performance-card speed">
+                                <div class="performance-icon">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <div class="performance-content">
+                                    <h4>Ultra Fast</h4>
+                                    <div class="performance-value">< 2s</div>
+                                    <p>Real-time voice adaptation</p>
+                                </div>
+                                <div class="performance-bar">
+                                    <div class="performance-fill speed-fill"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="performance-card quality">
+                                <div class="performance-icon">
+                                    <i class="fas fa-gem"></i>
+                                </div>
+                                <div class="performance-content">
+                                    <h4>High Quality</h4>
+                                    <div class="performance-value">95%+</div>
+                                    <p>Quality preservation</p>
+                                </div>
+                                <div class="performance-bar">
+                                    <div class="performance-fill quality-fill"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="performance-card efficiency">
+                                <div class="performance-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="performance-content">
+                                    <h4>Efficient</h4>
+                                    <div class="performance-value">10x</div>
+                                    <p>Faster than traditional</p>
+                                </div>
+                                <div class="performance-bar">
+                                    <div class="performance-fill efficiency-fill"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="about-visual animate-right">
-                <div class="tech-diagram">
-                    <div class="tech-node input">
-                        <span>Text Description</span>
-                    </div>
-                    <div class="tech-arrow"></div>
-                    <div class="tech-node process">
-                        <span>Hypernetwork</span>
-                    </div>
-                    <div class="tech-arrow"></div>
-                    <div class="tech-node output">
-                        <span>LoRA Weights</span>
+                <div class="about-visual animate-right">
+                    <!-- Tech Flow Diagram only -->
+                    <div class="tech-diagram">
+                        <div class="tech-node input">
+                            <div>Text Description</div>
+                        </div>
+                        <div class="tech-arrow"></div>
+                        <div class="tech-node process">
+                            <div>Hypernetwork</div>
+                        </div>
+                        <div class="tech-arrow"></div>
+                        <div class="tech-node output">
+                            <div>LoRA Weights</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,52 +308,127 @@
     <!-- Features Section -->
     <section class="features-section" id="features">
         <div class="features-container">
-            <div class="features-header">
-                <h2>Powerful Features</h2>
-                <p>Advanced capabilities that set T2A-LoRA apart</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card animate-up">
-                    <div class="feature-icon">
-                        <i class="fas fa-rocket"></i>
+            <div class="features-layout">
+                <div class="features-left">
+                    <div class="features-header">
+                        <h2>Powerful Features</h2>
+                        <p>Advanced capabilities that set T2A-LoRA apart from traditional voice synthesis systems</p>
                     </div>
-                    <h3>10x Faster Adaptation</h3>
-                    <p>Achieve voice adaptation in seconds, not hours. Our LoRA-based approach dramatically reduces computation time.</p>
+                    
+                    <div class="feature-highlight">
+                        <div class="highlight-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>Text-to-Voice LoRA Generation</h3>
+                        <p>The world's first system to generate voice adaptation weights directly from natural language descriptions. Simply describe the voice you want, and our AI creates it in real-time.</p>
+                        <div class="highlight-stats">
+                            <div class="highlight-stat">
+                                <span class="stat-number">∞</span>
+                                <span class="stat-text">Possible Voices</span>
+                            </div>
+                            <div class="highlight-stat">
+                                <span class="stat-number">1</span>
+                                <span class="stat-text">Simple Input</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-comparison">
+                        <h4>Traditional vs T2A-LoRA</h4>
+                        <div class="comparison-table">
+                            <div class="comparison-row">
+                                <span class="comparison-label">Setup Time</span>
+                                <span class="comparison-old">Hours of training</span>
+                                <span class="comparison-new">Seconds</span>
+                            </div>
+                            <div class="comparison-row">
+                                <span class="comparison-label">Control Method</span>
+                                <span class="comparison-old">Technical parameters</span>
+                                <span class="comparison-new">Natural language</span>
+                            </div>
+                            <div class="comparison-row">
+                                <span class="comparison-label">Flexibility</span>
+                                <span class="comparison-old">Fixed presets</span>
+                                <span class="comparison-new">Unlimited variations</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card animate-up">
-                    <div class="feature-icon">
-                        <i class="fas fa-eye"></i>
+                
+                <div class="features-right">
+                    <div class="features-grid">
+                        <div class="feature-card animate-up">
+                            <div class="feature-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3>10x Faster Adaptation</h3>
+                            <p>Achieve voice adaptation in seconds, not hours. Our LoRA-based approach dramatically reduces computation time while maintaining quality.</p>
+                            <div class="feature-metrics">
+                                <span class="metric">⚡ 2-3 seconds</span>
+                                <span class="metric">🎯 Real-time</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card animate-up">
+                            <div class="feature-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>Zero-shot Generalization</h3>
+                            <p>Adapt to new voice characteristics never seen during training, enabling unlimited voice possibilities and creative applications.</p>
+                            <div class="feature-metrics">
+                                <span class="metric">🧠 AI-Powered</span>
+                                <span class="metric">♾️ Unlimited</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card animate-up">
+                            <div class="feature-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h3>Multi-modal Control</h3>
+                            <p>Control voice characteristics through both text descriptions and audio vectors for maximum flexibility and precision.</p>
+                            <div class="feature-metrics">
+                                <span class="metric">📝 Text Input</span>
+                                <span class="metric">🎵 Audio Input</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card animate-up">
+                            <div class="feature-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h3>Multi-language Support</h3>
+                            <p>Native support for Korean and English with extensibility to other languages through our adaptive architecture.</p>
+                            <div class="feature-metrics">
+                                <span class="metric">🇰🇷 Korean</span>
+                                <span class="metric">🇺🇸 English</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card animate-up">
+                            <div class="feature-icon">
+                                <i class="fas fa-sliders-h"></i>
+                            </div>
+                            <h3>Fine-grained Control</h3>
+                            <p>Precisely control emotion, age, gender, accent, speaking speed, and pitch with intuitive sliders and natural descriptions.</p>
+                            <div class="feature-metrics">
+                                <span class="metric">🎭 Emotion</span>
+                                <span class="metric">⚙️ Technical</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card animate-up">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Quality Preservation</h3>
+                            <p>Maintain high audio quality and speaker similarity while adapting voice characteristics through advanced neural techniques.</p>
+                            <div class="feature-metrics">
+                                <span class="metric">🔊 HQ Audio</span>
+                                <span class="metric">✨ Natural</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Zero-shot Generalization</h3>
-                    <p>Adapt to new voice characteristics never seen during training, enabling unlimited voice possibilities.</p>
-                </div>
-                <div class="feature-card animate-up">
-                    <div class="feature-icon">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <h3>Multi-modal Control</h3>
-                    <p>Control voice characteristics through both text descriptions and audio vectors for maximum flexibility.</p>
-                </div>
-                <div class="feature-card animate-up">
-                    <div class="feature-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3>Multi-language Support</h3>
-                    <p>Native support for Korean and English with extensibility to other languages.</p>
-                </div>
-                <div class="feature-card animate-up">
-                    <div class="feature-icon">
-                        <i class="fas fa-sliders-h"></i>
-                    </div>
-                    <h3>Fine-grained Control</h3>
-                    <p>Precisely control emotion, age, gender, accent, and other voice characteristics.</p>
-                </div>
-                <div class="feature-card animate-up">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Quality Preservation</h3>
-                    <p>Maintain high audio quality and speaker similarity while adapting voice characteristics.</p>
                 </div>
             </div>
         </div>
@@ -313,25 +436,73 @@
 
     <!-- Research Section -->
     <section class="research-section" id="research">
+        <!-- Research Title - Two Column Layout -->
+        <div class="research-title-container">
+            <div class="research-title-left"></div>
+            <div class="research-title-right">
+                <h2 class="research-title">Research Innovation</h2>
+            </div>
+        </div>
+        
         <div class="research-container">
-            <div class="research-visual animate-left">
+            <!-- Left Column: Diagrams -->
+            <div class="research-diagrams animate-left">
                 <div class="research-diagram">
                     <div class="research-layer">
                         <span>Multi-modal Encoder</span>
+                        <div class="layer-detail">Text + Audio → Unified Representation</div>
                     </div>
                     <div class="research-layer">
                         <span>Hypernetwork</span>
+                        <div class="layer-detail">Dynamic Parameter Generation</div>
                     </div>
                     <div class="research-layer">
                         <span>LoRA Generation</span>
+                        <div class="layer-detail">Low-Rank Adaptation Weights</div>
                     </div>
                     <div class="research-layer">
                         <span>TTS Model</span>
+                        <div class="layer-detail">Voice Synthesis Output</div>
+                    </div>
+                </div>
+                
+                <div class="technical-details">
+                    <h3>Technical Specifications</h3>
+                    <div class="spec-grid">
+                        <div class="spec-item">
+                            <i class="fas fa-microchip"></i>
+                            <div>
+                                <strong>Architecture</strong>
+                                <span>Transformer-based Hypernetwork</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-database"></i>
+                            <div>
+                                <strong>Training Data</strong>
+                                <span>Multi-speaker, Multi-language</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <div>
+                                <strong>Inference</strong>
+                                <span>Real-time generation</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <strong>Framework</strong>
+                                <span>PyTorch, HuggingFace</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Right Column: Content, Metrics, Paper Link, Applications -->
             <div class="research-content animate-right">
-                <h2>Research Innovation</h2>
                 <p>
                     Our research introduces the first text-conditional voice LoRA generation methodology, 
                     combining hypernetworks with Low-Rank Adaptation for unprecedented voice control.
@@ -339,18 +510,50 @@
                 <div class="research-highlights">
                     <div class="highlight">
                         <h4>Novel Architecture</h4>
-                        <p>First-of-its-kind text-conditional voice LoRA generation system</p>
+                        <p>First-of-its-kind text-conditional voice LoRA generation system that bridges natural language understanding with voice synthesis.</p>
                     </div>
                     <div class="highlight">
                         <h4>Multi-modal Fusion</h4>
-                        <p>Innovative integration of text and audio conditioning</p>
+                        <p>Innovative integration of text and audio conditioning through advanced transformer architectures and cross-modal attention mechanisms.</p>
                     </div>
                     <div class="highlight">
                         <h4>Real-time Performance</h4>
-                        <p>Optimized for practical deployment and user interaction</p>
+                        <p>Optimized for practical deployment with efficient inference pipelines and user interaction capabilities.</p>
+                    </div>
+                    <div class="highlight">
+                        <h4>Zero-shot Capabilities</h4>
+                        <p>Generalization to unseen voice characteristics through robust representation learning and adaptive parameter generation.</p>
                     </div>
                 </div>
+                
+                <div class="research-metrics">
+                    <div class="research-metric">
+                        <span class="metric-value">98.5%</span>
+                        <span class="metric-label">Naturalness Score</span>
+                    </div>
+                    <div class="research-metric">
+                        <span class="metric-value">97.2%</span>
+                        <span class="metric-label">Speaker Similarity</span>
+                    </div>
+                    <div class="research-metric">
+                        <span class="metric-value">10x</span>
+                        <span class="metric-label">Speed Improvement</span>
+                    </div>
+                </div>
+                
                 <button class="research-btn">Read Research Paper</button>
+                
+                <div class="research-applications">
+                    <br><br><br>
+                    <h3>Research Applications</h3>
+                    <div class="app-tags">
+                        <span class="app-tag">Personalization</span>
+                        <span class="app-tag">Accent Control</span>
+                        <span class="app-tag">Voice Cloning</span>
+                        <span class="app-tag">Emotional TTS</span>
+                        <span class="app-tag">Accessibility</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -379,18 +582,18 @@
                     <a href="#publications">Publications</a>
                 </div>
                 <div class="link-group">
-                    <h4>Company</h4>
+                    <h4>Our Group</h4>
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
                     <a href="#careers">Careers</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 LatentForge. All rights reserved.</p>
+                <p>&copy;2024 LatentForge. All rights reserved.</p>
                 <div class="footer-social">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
                 </div>
             </div>
         </div>

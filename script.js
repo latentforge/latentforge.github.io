@@ -93,9 +93,9 @@ function updateCopyrightYear() {
     
     if (copyrightElement) {
         if (currentYear > 2024) {
-            copyrightElement.textContent = `© 2024-${currentYear} LatentForge. All rights reserved.`;
+            copyrightElement.textContent = `©2024-${currentYear} LatentForge. All rights reserved.`;
         } else {
-            copyrightElement.textContent = `© 2024 LatentForge. All rights reserved.`;
+            copyrightElement.textContent = `©2024 LatentForge. All rights reserved.`;
         }
     }
 }
@@ -546,3 +546,30 @@ function smoothScrollTo(target) {
     
     requestAnimationFrame(animation);
 }
+
+// Progress bars animation for About section
+function setupProgressBars() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const fills = entry.target.querySelectorAll('.performance-fill');
+                fills.forEach(fill => {
+                    setTimeout(() => {
+                        fill.classList.add('animate');
+                    }, 500);
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    const performanceGrid = document.querySelector('.performance-grid-horizontal');
+    if (performanceGrid) {
+        observer.observe(performanceGrid);
+    }
+}
+
+// Initialize progress bars when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Existing initialization code...
+    setupProgressBars();
+});
