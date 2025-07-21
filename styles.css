@@ -49,11 +49,38 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     color: #1a1a1a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
 }
 
 .nav-logo i {
     color: #6366f1;
     font-size: 1.8rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: logoGlow 3s ease-in-out infinite alternate;
+    filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.3));
+    transition: all 0.3s ease;
+}
+
+.nav-logo:hover i {
+    transform: rotateY(360deg);
+    filter: drop-shadow(0 4px 8px rgba(99, 102, 241, 0.5));
+}
+
+@keyframes logoGlow {
+    0% {
+        filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.3));
+    }
+    100% {
+        filter: drop-shadow(0 4px 12px rgba(139, 92, 246, 0.6));
+    }
 }
 
 .nav-menu {
@@ -990,11 +1017,28 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.02);
 }
 
 .footer-logo i {
     color: #6366f1;
     font-size: 1.8rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.3));
+    transition: all 0.3s ease;
+}
+
+.footer-logo:hover i {
+    transform: rotateX(360deg);
+    filter: drop-shadow(0 4px 8px rgba(99, 102, 241, 0.5));
 }
 
 .footer-description {
