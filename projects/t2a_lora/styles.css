@@ -92,11 +92,45 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-logo:visited {
+    color: #ffffff;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
 }
 
 .nav-logo i {
     color: #6366f1;
     font-size: 1.8rem;
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: audioWave 2s ease-in-out infinite alternate;
+    filter: drop-shadow(0 2px 4px rgba(6, 182, 212, 0.4));
+    transition: all 0.3s ease;
+}
+
+.nav-logo:hover i {
+    transform: scaleX(1.2);
+    filter: drop-shadow(0 4px 8px rgba(6, 182, 212, 0.6));
+}
+
+@keyframes audioWave {
+    0% {
+        filter: drop-shadow(0 2px 4px rgba(6, 182, 212, 0.4));
+        transform: scaleY(1);
+    }
+    100% {
+        filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.7));
+        transform: scaleY(1.1);
+    }
 }
 
 .nav-menu {
@@ -1926,11 +1960,43 @@ body {
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-logo:visited {
+    color: #ffffff;
+}
+
+.footer-logo:hover {
+    transform: scale(1.02);
 }
 
 .footer-logo i {
     color: #6366f1;
     font-size: 1.8rem;
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 4px rgba(6, 182, 212, 0.4));
+    transition: all 0.3s ease;
+    animation: audioGlow 3s ease-in-out infinite alternate;
+}
+
+.footer-logo:hover i {
+    transform: scaleX(1.15);
+    filter: drop-shadow(0 4px 8px rgba(6, 182, 212, 0.6));
+}
+
+@keyframes audioGlow {
+    0% {
+        filter: drop-shadow(0 2px 4px rgba(6, 182, 212, 0.4));
+    }
+    100% {
+        filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.7));
+    }
 }
 
 .footer-brand p {
