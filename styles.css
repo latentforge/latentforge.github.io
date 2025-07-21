@@ -492,9 +492,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 70px);
     width: 100%;
-    margin-top: 70px;
 }
 
 .hero-content {
@@ -596,7 +594,6 @@ body {
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s ease;
-    border: 2px solid #e5e7eb;
     display: flex;
     align-items: center;
     gap: 8px;
